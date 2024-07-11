@@ -1,8 +1,10 @@
+import { Button } from '@/components/ui/button'
+import Authenticated from '@/layouts/authenticate'
 import { Head } from '@inertiajs/react'
 
 export default function Home(props: { version: number }) {
   return (
-    <>
+    <Authenticated>
       <Head title="Homepage" />
 
       <div className="container">
@@ -11,8 +13,11 @@ export default function Home(props: { version: number }) {
         <span>
           Learn more about AdonisJS and Inertia.js by visiting the{' '}
           <a href="https://docs.adonisjs.com/guides/inertia">AdonisJS documentation</a>.
+          <Button>
+            Halo
+          </Button>
         </span>
       </div>
-    </>
+    </Authenticated>
   )
 }
